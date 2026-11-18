@@ -21,7 +21,7 @@
     "lint": "standard",
     "test": "npm run lint && npm run test:node && npm run test:bare",
     "test:node": "brittle-node --timeout 120000 test/all.js",
-    "test:bare": "bare node_modules/brittle/brittle-bare.js --timeout 120000 test/all.js",
+    "test:bare": "node node_modules/bare-runtime/bin/bare node_modules/brittle/brittle-bare.js --timeout 120000 test/all.js",
     "start": "node bin.js"
   },
   "repository": {
