@@ -33,7 +33,7 @@
   "dependencies": {
     "b4a": "^1.6.7",
     "bare-process": "^4.2.2",
-    "chat-record-codec": "github:AsynKarma/chat-record-codec#v1.0.0",
+    "chat-record-codec": "^1.0.0",
     "compact-encoding": "^3.4.0",
     "corestore": "^7.4.0",
     "hypercore-crypto": "^3.4.2",

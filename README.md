@@ -1,6 +1,6 @@
 # keet-lite-core
 
-Two Bare or Node processes join one Hyperswarm topic and replicate one Hypercore per user through Corestore. Chat records are appended to the local core and encoded with [`chat-record-codec`](https://github.com/AsynKarma/chat-record-codec) (`compact-encoding`). That package is not on npm yet; this repo depends on git tag `v1.0.0`.
+Two Bare or Node processes join one Hyperswarm topic and replicate one Hypercore per user through Corestore. Chat records are appended to the local core and encoded with [`chat-record-codec`](https://www.npmjs.com/package/chat-record-codec) 1.0.0 (`compact-encoding`).
 
 This package is CommonJS (`require`). Corestore and Hyperswarm are CommonJS, and a Bare worklet loads the same entry with `require`.
 
