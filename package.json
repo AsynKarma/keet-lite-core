@@ -1,0 +1,48 @@
+{
+  "name": "keet-lite-core",
+  "version": "0.1.0",
+  "description": "One Hypercore per user on a shared Hyperswarm topic",
+  "main": "index.js",
+  "bin": {
+    "keet-lite-core": "bin.js"
+  },
+  "files": [
+    "index.js",
+    "bin.js",
+    "lib"
+  ],
+  "imports": {
+    "process": {
+      "bare": "bare-process",
+      "default": "process"
+    }
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run lint && npm run test:node && npm run test:bare",
+    "test:node": "brittle-node --timeout 120000 test/all.js",
+    "test:bare": "bare node_modules/brittle/brittle-bare.js --timeout 120000 test/all.js",
+    "start": "node bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AsynKarma/keet-lite-core.git"
+  },
+  "author": "Venugopal Reddy Devarapally",
+  "license": "MIT",
+  "dependencies": {
+    "b4a": "^1.6.7",
+    "bare-process": "^4.2.2",
+    "compact-encoding": "^3.4.0",
+    "corestore": "^7.4.0",
+    "hypercore-crypto": "^3.4.2",
+    "hyperswarm": "^4.8.0",
+    "protomux": "^3.6.0"
+  },
+  "devDependencies": {
+    "bare-runtime": "^1.24.0",
+    "brittle": "^4.5.0",
+    "standard": "^17.1.2",
+    "test-tmp": "^1.4.0"
+  }
+}
