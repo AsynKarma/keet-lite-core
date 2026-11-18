@@ -3,7 +3,7 @@ const c = require('compact-encoding')
 const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
 const Protomux = require('protomux')
-const record = require('./lib/record.js')
+const record = require('chat-record-codec')
 const toTopic = require('./lib/topic.js')
 
 const PROTOCOL = 'keet-lite-core'

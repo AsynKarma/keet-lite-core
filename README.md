@@ -1,6 +1,6 @@
 # keet-lite-core
 
-Two Bare or Node processes join one Hyperswarm topic and replicate one Hypercore per user through Corestore. Chat records are appended to the local core and encoded with `compact-encoding`.
+Two Bare or Node processes join one Hyperswarm topic and replicate one Hypercore per user through Corestore. Chat records are appended to the local core and encoded with [`chat-record-codec`](https://github.com/AsynKarma/chat-record-codec) (`compact-encoding`). That package is not on npm yet; this repo depends on git tag `v1.0.0`.
 
 This package is CommonJS (`require`). Corestore and Hyperswarm are CommonJS, and a Bare worklet loads the same entry with `require`.
 
@@ -25,10 +25,12 @@ Each Hypercore block is one record. The field order is the schema:
 
 ```js
 const c = require('compact-encoding')
-const { record } = require('keet-lite-core')
+const record = require('chat-record-codec')
 
 const block = c.encode(record, { sender, timestamp, text })
 ```
+
+`keet-lite-core` re-exports the same codec as `record`.
 
 ## API
 
